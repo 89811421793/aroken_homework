@@ -1,0 +1,12 @@
+
+#greeting {
+    font-size: 45px;
+    font-style:italic;
+    text-align:center;
+}
+
+.contentpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
