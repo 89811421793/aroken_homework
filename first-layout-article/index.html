@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Разметка статьи</title>
+    <style>
+      li::marker {
+        color: blue;
+      }
+
+      .wrapper {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header style="display: flex; justify-content: space-between">
+        <a href="/">
+          <!-- одинарный слеш ведет на главную страницу; логотип все советуют делать через svg, а не текст: шрифт может меняться -->
+          <img src="logo.svg" alt="Логотип клуба" width="90" height="60" />
+        </a>
+
+        <div>
+          <span>Первое посещение бесплатно</span>
+          <!-- верхний регистр можно поставить в разметке, но все советуют его регулировать через CSS -->
+          <!-- br,кажется, можно будет убрать когда будет перенос на другую строку через CSS -->
+          <br />
+          <a
+            href="tel:+7 (928) 282-28-82"
+            style="text-decoration: none; color: #000"
+            >+7 (928) 282-28-82</a
+          >
+        </div>
+      </header>
+      <hr />
+      <!-- либо оставляется свойство border-bottom у header...??? -->
+      <main>
+        <h1>Открытие нового <br />филиала в центре города!</h1>
+        <p>
+          <!-- решетка как заглушка до момента, как узнаем куда ссылка ведет -->
+
+          Фитнес клуб «Fit.Studio» рад сообщить об открытии нового филиала в
+          центре города. Новый клуб расположен в
+          <a href="#" style="text-decoration: none">удобном месте</a> , рядом с
+          остановками <br />
+          общественного транспорта, что делает его доступным для всех жителей
+          города. Новое просторное помещение оборудовано современными
+          тренажёрами,<br />
+          зонами для групповых занятий и отдыха, а также сауной и бассейном.
+        </p>
+        <p>
+          Кроме того, в "FitLife" работают опытные тренеры, которые помогут
+          составить индивидуальную программу тренировок и диеты для достижения
+          желаемых <br />результатов. Клиенты могут также воспользоваться
+          услугами персональных тренировок и консультаций по здоровому образу
+          жизни.
+        </p>
+        <!-- изображение вставляется через тег, поэтому оно не фоновое, а контентное -->
+        <img
+          src="./images/gym-image.jpg"
+          width="1080"
+          height="500"
+          alt="спортзал или фитнес-зал"
+        />
+        <h2>Групповые занятия</h2>
+        <p>
+          В новом филиале «Fit.Studio» будут проводиться различные групповые
+          занятия. Каждый клиент <br />
+          сможет подобрать подходящий ему вид занятий и найти комфортную среду
+          для тренировок.
+        </p>
+        <ul>
+          <li>Йога</li>
+          <li>Пилатес</li>
+          <li>Аэробика</li>
+          <li>Танцы</li>
+          <li>Силовые тренировки</li>
+        </ul>
+        <h2>Обзор нового филиала</h2>
+        <video
+          src="./videos/gym-video.mp4"
+          width="1080"
+          height="500"
+          controls
+          poster="./images/poster.jpg"
+          muted
+        ></video>
+        <p>
+          Приглашаем всех желающих посетить новый филиал фитнес клуба "FitLife"
+          и начать заботиться о своем здоровье и фитнесе прямо сейчас!
+        </p>
+      </main>
+    </div>
+    <footer>
+      <a href="/" style="display: block; text-align: center">
+        <!-- одинарный слеш ведет на главную страницу; логотип все советуют делать через svg, а не текст: шрифт может меняться -->
+        <img src="logo.svg" alt="Логотип клуба" width="90" height="60" />
+      </a>
+      <nav>
+        <ul style="display: flex; justify-content: center; list-style: none">
+          <li>
+            <a href="#" style="text-decoration: none; color: grey">Клубы</a>
+          </li>
+          <li>
+            <a href="#" style="text-decoration: none; color: grey"
+              >Тренировки</a
+            >
+          </li>
+          <li>
+            <a href="#" style="text-decoration: none; color: grey"
+              >Абонементы</a
+            >
+          </li>
+          <li>
+            <a href="#" style="text-decoration: none; color: grey"
+              >Программа лояльности</a
+            >
+          </li>
+          <li>
+            <a href="#" style="text-decoration: none; color: grey">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+      <span style="display: block; text-align: center; color: gray"
+        >&copy; Copyright. Все права защищены.</span
+      >
+    </footer>
+  </body>
+</html>
