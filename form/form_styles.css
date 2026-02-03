@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  font-family: sans-serif;
+  display: block;
+  margin: auto;
+  width: fit-content;
+  border: 2px solid #ccccccae;
+  border-radius: 10px;
+  padding: 30px 60px 30px 20px;
+  min-width: 350px;
+  background-color: rgb(240, 240, 235);
+  overflow: hidden;
+}
+
+.form fieldset {
+  margin-bottom: 15px;
+  padding: 0;
+  border: transparent;
+}
+
+legend {
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.form-input {
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  max-height: 150px;
+  margin: 5px 0 15px;
+  resize: vertical;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #a0a0a0;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.form-checkbox-label {
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  min-width: 120px;
+  border: 1px solid rgb(213, 209, 209);
+  border-radius: 8px;
+}
+
+.btn[type="submit"] {
+  float: left;
+}
+
+.btn[type="reset"] {
+  float: right;
+}
+
+/* select, checkbox, radio buttons стилизуются своеобразно. поэтому позже. там и псевдоэлементы,и позиционирование и др моменты. не буду пока торопиться */
