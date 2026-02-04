@@ -1,0 +1,92 @@
+/* фоновые svg - размещение через абсолютное позиционирование псевдоэлементов - позже. */
+
+html {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+body * {
+  /* применить ко всем потомкам в пределах body */
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.article {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.article-title {
+  max-width: 596px;
+  margin-bottom: 40px;
+  font-family: Oswald;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c332f;
+}
+
+.article-title-lg {
+  font-size: 48px;
+}
+
+.services-info {
+  max-width: 744px;
+}
+
+.article-title-md {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #535755;
+}
+
+.article-accent {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.article-mb {
+  margin-bottom: 80px;
+}
+
+.article-list-item {
+  margin-bottom: 12px;
+}
+.article-list-item::marker {
+  color: #3596ed;
+  font-size: 8px; /* высота - 8 и ширина - 8 по макету...? */
+}
+
+.article-image,
+.article-video {
+  width: 100%;
+}
+
+.article-list {
+  margin-top: 0;
+  padding-left: 14px;
+}
+
+.article-item {
+  margin-bottom: 12px;
+}
+
+.article-video {
+  margin-bottom: 40px;
+}
