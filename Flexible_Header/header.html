@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - Верхний колонтитул</title>
+    <link rel="stylesheet" href="./css/css_header.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-wrapper">
+        <!-- ссылку нельзя помещать внутри УНАРНОГО тега img -->
+        <a class="logo-link" href="/">
+          <img
+            class="logo"
+            src="./images/logo.svg"
+            width="50"
+            height="50"
+            alt="logo"
+          />
+        </a>
+
+        <!-- для валидации, seo и соблюдения иерархии вложенности ссылка должна быть внутри ПАРНОГО li а не наоборот -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">О компании</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Цены</a></li>
+          </ul>
+        </nav>
+
+        <a class="contact-link" href="tel:+79999999999">+7 999 999 99 99</a>
+      </div>
+    </header>
+  </body>
+</html>
