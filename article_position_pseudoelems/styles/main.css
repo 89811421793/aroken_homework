@@ -1,0 +1,196 @@
+html {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.article {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.article-title {
+  max-width: 596px;
+  margin-bottom: 40px;
+  font-family: Oswald;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c332f;
+}
+
+.article-title-lg {
+  font-size: 48px;
+}
+
+.services-info {
+  max-width: 744px;
+}
+
+.article-title-md {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #535755;
+}
+
+.article-accent {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.article-mb-pic {
+  margin-bottom: 80px;
+}
+
+.article-mb-vid {
+  margin-bottom: 40px;
+}
+
+.article-decor-wrapper {
+  position: relative;
+}
+
+.article-decor-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  background: url("../assets/media/images/icons/decor-icon.svg") no-repeat;
+  width: 528px;
+  height: 48px;
+}
+
+.article-decor-wrapper-pic::after {
+  top: 15%;
+  left: -25%;
+}
+
+.article-decor-wrapper-vid::after {
+  right: -25%;
+  bottom: 20%;
+}
+
+.article-mb {
+  margin-bottom: 80px;
+}
+
+.article-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.article-list-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* вариант с пустым content и border-radius */
+.article-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3596ed;
+  border-radius: 50%;
+}
+
+/* пседоэлементы - изначально инлайновые и создаются для парных тегов
+часто before и after взаимозаменяемы;
+абсолютно позиционированные элементы не участвуют в компоновке гибкого макета
+*/
+
+/* вариант с символом круга */
+/* .article-list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3596ed;
+  font-size: 25px;
+} */
+
+/* вариант svg в content (не получится воздействовать на размеры - взяты из фигма) */
+/* .article-list-item::before {
+  content: url(../assets/media/images/icons/marker.svg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+/* вариант с svg: больше контроля над его размерами если брать его не из content а из фона */
+/* .article-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-image: url(../assets/media/images/icons/marker.svg);
+} */
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* в ряде случаев если убрать position, можно выставить display:inline-block и управлять наложением через отрицательный margin
+поздний перекроет ранний */
+
+.article-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* кнопка будет всегда поверх видео, например, на 10 условных слоев; без position - не работает*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3596ed;
+  border: transparent; /* или none */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.article-image,
+.article-video {
+  width: 100%;
+}
+
+.article-item {
+  margin-bottom: 12px;
+}
+
+.article-video {
+  margin-bottom: 40px;
+}
