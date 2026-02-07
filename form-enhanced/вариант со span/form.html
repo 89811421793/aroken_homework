@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ФОРМА</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="form_styles.css" />
+  </head>
+  <body>
+    <form action="" class="form">
+      <fieldset class="form-section">
+        <legend>Ваши личные данные</legend>
+
+        <!-- атрибут inputmode для текстовых полей ввода необязателен -->
+        <label class="form-group">
+          Ваше имя
+          <input
+            type="text"
+            class="form-input"
+            name="full-name"
+            placeholder="введите ваше имя"
+            required
+          />
+        </label>
+
+        <label class="form-group">
+          Ваш возраст
+          <input
+            type="number"
+            class="form-input"
+            name="age"
+            inputmode="numeric"
+            placeholder="введите ваш возраст"
+            required
+          />
+        </label>
+
+        <label class="form-group">
+          Ваш номер телефона
+          <input
+            type="tel"
+            class="form-input"
+            name="phone-number"
+            inputmode="tel"
+            placeholder="введите ваш номер телефона"
+            required
+          />
+        </label>
+
+        <label class="form-group">
+          Ваша почта
+          <input
+            type="email"
+            class="form-input"
+            name="email"
+            inputmode="email"
+            placeholder="введите ваш емайл"
+            required
+          />
+        </label>
+
+        <label class="form-group">
+          Ваш пол
+          <input type="radio" name="gender" value="male" required checked />М
+          <input type="radio" name="gender" value="female" required />Ж
+        </label>
+
+        <!-- <label class="form-group">
+          Ваша страна
+          <select name="country" required>
+            <option value="" disabled selected>Не выбрано</option>
+            <option value="Russia">Российская Федерация</option>
+            <option value="USA">США</option>
+          </select>
+        </label> -->
+
+        <!-- datalist - сомнительная аьтернатива select -->
+        <label for="country">Ваша страна</label>
+        <input
+          id="country"
+          name="country"
+          list="countriesList"
+          placeholder="Не выбрано"
+        />
+        <datalist id="countriesList">
+          <option value="Russia">Российская Федерация</option>
+          <option value="USA">США</option>
+        </datalist>
+      </fieldset>
+
+      <label for="message" class="form-group">Сообщение</label>
+      <textarea
+        id="message"
+        name="message"
+        class="form-textarea"
+        placeholder="дополнительная информация"
+        required
+      >
+      </textarea>
+
+      <label class="form-checkbox-label">
+        <input
+          class="form-checkbox"
+          type="checkbox"
+          name="agreement"
+          value="agreed"
+          required
+          checked
+        />
+        <span class="form-checkbox-mod"></span>
+        <a href="#" style="font-style: oblique">
+          <span class="checkbox-text">Я принимаю правила</span>
+        </a>
+      </label>
+      <div class="btn-wrap">
+        <button type="submit" class="btn">Отправить</button>
+        <button type="reset" class="btn">Очистить</button>
+      </div>
+    </form>
+  </body>
+</html>
