@@ -106,8 +106,9 @@ legend {
   position: absolute;
   width: 20px;
   height: 20px;
+  border: 1px solid;
   border-radius: 3px;
-  background-color: #2c718d;
+  background-color: white;
 }
 
 .form-checkbox:checked + .form-checkbox-mod {
@@ -167,3 +168,4 @@ legend {
   outline: 2px solid #006c55;
   outline-offset: 1px;
 }
+
