@@ -1,0 +1,141 @@
+.article {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.article-title {
+  max-width: 596px;
+  margin-bottom: 40px;
+  font-family: Oswald;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c332f;
+}
+
+.article-title-lg {
+  font-size: 48px;
+}
+
+.services-info {
+  max-width: 744px;
+}
+
+.article-title-md {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #535755;
+}
+
+.article-accent {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.article-mb-pic {
+  margin-bottom: 80px;
+}
+
+.article-mb-vid {
+  margin-bottom: 40px;
+}
+
+.article-decor-wrapper {
+  position: relative;
+}
+
+.article-decor-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  background: url("../assets/media/images/icons/decor-icon.svg") no-repeat;
+  width: 528px;
+  height: 48px;
+}
+
+.article-decor-wrapper-pic::after {
+  top: 15%;
+  left: -25%;
+}
+
+.article-decor-wrapper-vid::after {
+  right: -25%;
+  bottom: 20%;
+}
+
+.article-mb {
+  margin-bottom: 80px;
+}
+
+.article-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.article-list-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.article-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3596ed;
+  border-radius: 50%;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.article-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3596ed;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  /* padding-left: 10px; */
+}
+
+.article-play-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  margin-left: 4px; /* или .article-play-btn {padding-left:10px;} */
+}
+
+.article-image,
+.article-video {
+  width: 100%;
+}
+
+.article-item {
+  margin-bottom: 12px;
+}
+
+.article-video {
+  margin-bottom: 40px;
+}
