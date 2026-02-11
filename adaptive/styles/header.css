@@ -1,0 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d3cbd9;
+}
+
+.phone {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #858e8a;
+}
+
+.phone span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.phone a {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c332f;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.phone a:hover {
+  color: #3596ed;
+}

@@ -1,0 +1,13 @@
+.article-decor-wrapper-pic::after,
+.article-decor-wrapper-vid::after {
+  display: none;
+}
+
+.article-mb {
+  margin-bottom: 20px;
+}
+
+.article {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
