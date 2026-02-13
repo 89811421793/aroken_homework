@@ -124,7 +124,7 @@
   margin-bottom: 8px;
 }
 
-.news__card footer {
+.news__card news__card-footer {
   padding: 0 20px 20px;
   margin-top: auto;
 }
@@ -344,3 +344,4 @@
     font-size: 14px;
   }
 }
+
