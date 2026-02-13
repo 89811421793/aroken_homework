@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit Studio - Главная</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="128x128"
+      href="./assets/media/images/icons/favicon-icon.svg"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo-link" href="/">
+            <img
+              class="header__logo"
+              src="./assets/media/images/icons/logo-icon.svg"
+              width="84"
+              height="45"
+              alt="Логотип Fit Studio"
+            />
+          </a>
+          <div class="header__phone">
+            <span class="header__phone-text">Первое посещение бесплатно</span>
+            <a class="header__phone-link" href="tel:+79282822882"
+              >+7 (928) 282-28-82</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero section">
+      <div class="container hero__inner">
+        <div class="hero__info">
+          <h1 class="hero__title">
+            Подтянутое тело
+            <strong class="hero__title-accent">за месяц</strong> тренировок
+          </h1>
+          <p class="hero__description text">
+            Программа тренировки включает в себя разнообразные упражнения,
+            направленные на развитие силы и мышечного тонуса.
+          </p>
+          <a class="hero__link button" href="#">Посмотреть программу</a>
+        </div>
+        <div class="hero__images">
+          <span class="hero__choose text">Выбери своего тренера</span>
+          <img
+            class="hero__img hero__img--sportswoman"
+            src="./assets/media/images/sporty-woman-img.jpg"
+            srcset="
+              ./assets/media/images/kot.jpg              450w,
+              ./assets/media/images/sporty-woman-img.jpg 600w
+            "
+            sizes="(max-width:600px) 200px, 500px"
+            alt="Спортcменка держит в руках скакалку"
+          />
+
+          <img
+            class="hero__img hero__img--sportsman"
+            src="./assets/media/images/sporty-man-img.jpg"
+            srcset="
+              ./assets/media/images/kot.jpg            450w,
+              ./assets/media/images/sporty-man-img.jpg 600w
+            "
+            sizes="(max-width:600px) 200px, 500px"
+            alt="Спортсмен держит в руках гантели"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="news section">
+      <div class="container">
+        <h2 class="news__title title-lg">Последние новости</h2>
+        <div class="news__list">
+          <article class="news__card">
+            <header class="news__card-header">
+              <img
+                class="news__card-img"
+                src="./assets/media/images/newscard/news-1-img.jpg"
+                width="284"
+                height="203"
+                alt="Велотренажеры в спортзале"
+              />
+              <div class="news__card-info">
+                <time class="news__card-date text-sub" datetime="2024.04.19">
+                  19.04.2024
+                </time>
+                <h3 class="news__card-title text">
+                  Открытие нового филиала в центре города!
+                </h3>
+              </div>
+            </header>
+            <footer class="news__card-footer">
+              <a class="news-card__link" href="article.html">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news__card">
+            <header class="news__card-header">
+              <img
+                class="news__card-img"
+                src="./assets/media/images/newscard/news-2-img.jpg"
+                width="284"
+                height="203"
+                alt="Группа спортсменок занимается спортом"
+              />
+              <div class="news__card-info">
+                <time class="news__card-date text-sub" datetime="2024.04.17">
+                  17.04.2024
+                </time>
+                <h3 class="news__card-title text">
+                  Запуск новой программы тренировок для начинающих
+                </h3>
+              </div>
+            </header>
+            <footer class="news__card-footer">
+              <a class="news-card__link" href="#">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news__card">
+            <header class="news__card-header">
+              <img
+                class="news__card-img"
+                src="./assets/media/images/newscard/news-3-img.jpg"
+                width="284"
+                height="203"
+                alt="Две девушки занимаются на велотренажерах"
+              />
+              <div class="news__card-info">
+                <time class="news__card-date text-sub" datetime="2024.04.13">
+                  13.04.2024
+                </time>
+                <h3 class="news__card-title text">
+                  Специальное предложение для студентов и школьников
+                </h3>
+              </div>
+            </header>
+            <footer class="news__card-footer">
+              <a class="news-card__link" href="#">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news__card">
+            <header class="news__card-header">
+              <img
+                class="news__card-img"
+                src="./assets/media/images/newscard/news-4-img.jpg"
+                width="284"
+                height="203"
+                alt="Девушка на беговой дорожке"
+              />
+              <div class="news__card-info">
+                <time class="news__card-date text-sub" datetime="2024.04.08">
+                  08.04.2024
+                </time>
+                <h3 class="news__card-title text">
+                  Открыт конкурс на лучший фитнес-челлендж
+                </h3>
+              </div>
+            </header>
+            <footer class="news__card-footer">
+              <a class="news-card__link" href="#">Подробнее</a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section">
+      <div class="container">
+        <h2 class="faq__title title-lg">Вопросы и ответы</h2>
+        <div class="faq__wrapper">
+          <img
+            class="faq__wrapper-img"
+            src="./assets/media/images/sporty-woman-2-img.jpg"
+            width="492"
+            height="531"
+            alt="Молодая спортсменка с гантелями в руках"
+          />
+          <div class="faq__accordion">
+            <details class="faq__item" name="faq" open>
+              <summary class="faq__question title-md">
+                Какие способы оплаты вы принимаете?
+              </summary>
+              <p class="faq__answer text">
+                Наш сайт подключен к интернет-эквайрингу, и вы можете оплатить
+                товар или услугу банковской картой Visa, MasterCard, Maestro и
+                МИР. Также в наших клубах возможна наличная оплата при посещении
+                фитнес-центра.
+              </p>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__question title-md">
+                Какие абонементы у вас есть?
+              </summary>
+              <p class="faq__answer text">
+                Далеко-далеко за словесными горами в стране гласных и согласных
+                живут, рыбные тексты. Продолжил lorem ее большого вскоре точках
+                вопроса, рыбного что одна!
+              </p>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__question title-md">
+                Есть ли у вас рассрочка на абонементы?
+              </summary>
+              <p class="faq__answer text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+                esse, deleniti blanditiis facilis molestiae earum placeat
+                aspernatur voluptates cupiditate sed, dolorum quae quaerat,
+                corrupti minima! Laudantium eos nostrum neque qui!
+              </p>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__question title-md">
+                Есть ли у вас бонусы для постоянных клиентов?
+              </summary>
+              <p class="faq__answer text">
+                Далеко-далеко, за словесными горами в стране гласных и согласных
+                живут рыбные тексты. Реторический вопрос страна своего выйти
+                подзаголовок жаренные диких даже, необходимыми рот пор, алфавит
+                осталось курсивных.
+              </p>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__question title-md">
+                Возможно ли переоформить мою клубную карту на другого человека?
+              </summary>
+              <p class="faq__answer text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis nulla nesciunt nobis tempora eveniet officiis!
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <a class="footer__logo-link" href="/">
+            <img
+              class="footer__logo"
+              src="./assets/media/images/icons/logo-icon.svg"
+              width="84"
+              height="45"
+              alt="Логотип Fit Studio"
+            />
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Клубы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Тренировки</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Абонементы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Программа лояльности</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+        <span class="footer__copyright"
+          >&copy; Copyright. Все права защищены</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
