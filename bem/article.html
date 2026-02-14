@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новость - открытие филиала фитнес клуба в центре города</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/article.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/adapted_article.css"
+      media="screen and (max-width:992px)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="128x128"
+      href="./assets/media/images/icons/favicon-icon.svg"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo-link" href="/">
+            <img
+              class="header__logo"
+              src="./assets/media/images/icons/logo-icon.svg"
+              width="84"
+              height="45"
+              alt="Логотип Fit Studio"
+            />
+          </a>
+          <div class="header__phone">
+            <span class="header__phone-text">Первое посещение бесплатно</span>
+            <a class="header__phone-link" href="tel:+79282822882"
+              >+7 (928) 282-28-82</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <article class="article">
+      <div class="container">
+        <section class="about">
+          <h1 class="about__title news-title">
+            Открытие нового филиала в центре города!
+          </h1>
+          <p class="about__desc about__desc--accent news-text">
+            Фитнес клуб «Fit.Studio» рад сообщить об открытии нового филиала
+            в центре города. Новый клуб расположен в удобном месте, рядом
+            с остановками общественного транспорта, что делает его доступным
+            для всех жителей города. Новое просторное помещение оборудовано
+            современными тренажёрами, зонами для групповых занятий и отдыха,
+            а также сауной и бассейном.
+          </p>
+          <p class="about__desc news-text">
+            Кроме того, в "FitLife" работают опытные тренеры, которые помогут
+            составить индивидуальную программу тренировок и диеты для достижения
+            желаемых результатов. Клиенты могут также воспользоваться услугами
+            персональных тренировок и консультаций по здоровому образу жизни.
+          </p>
+          <div class="about__decor about__decor--picture">
+            <img
+              class="about__image"
+              src="./assets/media/images/fitness_gym_2x.jpg"
+              width="1220"
+              height="512"
+              alt="спортзал с тренажерами"
+            />
+          </div>
+        </section>
+
+        <section class="services">
+          <h2 class="services__title news-title">Групповые занятия</h2>
+          <p class="services__desc news-text">
+            В новом филиале «Fit.Studio» будут проводиться различные групповые
+            занятия. Каждый клиент сможет подобрать подходящий ему вид занятий
+            и найти комфортную среду для тренировок.
+          </p>
+          <ul class="services__list news-text">
+            <li class="services__list-item">Йога</li>
+            <li class="services__list-item">Пилатес</li>
+            <li class="services__list-item">Аэробика</li>
+            <li class="services__list-item">Танцы</li>
+            <li class="services__list-item">Силовые тренировки</li>
+          </ul>
+        </section>
+
+        <section class="review">
+          <h2 class="review__title news-title">Обзор нового филиала</h2>
+          <div class="review__decor review__decor--video">
+            <div class="review__video-wrap">
+              <button class="review__video-btn">
+                <svg width="20" height="20" viewBox="0 0 17 20">
+                  <use
+                    xlink:href="./assets/media/images/icons/iconsprite.svg#play-icon"
+                  ></use>
+                </svg>
+              </button>
+              <video
+                class="review__vid"
+                src="./assets/media/videos/gym-video.mp4"
+                width="1220"
+                height="686"
+                controls
+                muted
+              ></video>
+            </div>
+          </div>
+          <p class="review__text news-text">
+            Приглашаем всех желающих посетить новый филиал фитнес клуба
+            "FitLife" и начать заботиться о своем здоровье и фитнесе прямо
+            сейчас!
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <a class="footer__logo-link" href="/">
+            <img
+              class="footer__logo"
+              src="./assets/media/images/icons/logo-icon.svg"
+              width="84"
+              height="45"
+              alt="Логотип Fit Studio"
+            />
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Клубы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Тренировки</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Абонементы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Программа лояльности</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+        <span class="footer__copyright"
+          >&copy; Copyright. Все права защищены</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

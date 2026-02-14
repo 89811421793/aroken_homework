@@ -1,0 +1,9 @@
+.about__decor--picture::after,
+.review__decor--video::after {
+  display: none;
+}
+
+.article {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
