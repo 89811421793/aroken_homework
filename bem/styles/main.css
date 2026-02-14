@@ -129,7 +129,7 @@
   margin-top: auto;
 }
 
-.news-card__link {
+.news__card-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -143,7 +143,7 @@
   color: #3596ed;
 }
 
-.news-card__link::after {
+.news__card-link::after {
   content: "";
   display: inline-block;
   width: 22px;
@@ -158,7 +158,7 @@
     -webkit-transform 0.3s;
 }
 
-.news-card__link:hover::after {
+.news__card-link:hover::after {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
@@ -344,5 +344,6 @@
     font-size: 14px;
   }
 }
+
 
 
