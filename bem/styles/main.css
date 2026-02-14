@@ -141,6 +141,8 @@
   font-size: 16px;
   line-height: 130%;
   color: #3596ed;
+  padding-left:20px;
+  padding-bottom:30px;
 }
 
 .news__card-link::after {
@@ -344,6 +346,7 @@
     font-size: 14px;
   }
 }
+
 
 
 
