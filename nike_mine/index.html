@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/icons/fav-nike.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Nike Air Mag</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__wrapper">
+        <a href="/" class="header__logo" aria-label="На главную">
+          <img
+            class="logo__img"
+            src="./images/icons/logo-icon.svg"
+            width="50"
+            height="20"
+            alt="логотип найк"
+          />
+        </a>
+        <nav
+          class="header__menu menu"
+          id="header__menu"
+          aria-label="Основная навигация"
+        >
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#airmag" class="menu__link">Air Mag</a>
+            </li>
+            <li class="menu__item">
+              <a href="#sizes" class="menu__link">Размеры</a>
+            </li>
+            <li class="menu__item">
+              <a href="#chars" class="menu__link">Характеристики</a>
+            </li>
+            <li class="menu__item">
+              <a href="#tops" class="menu__link">Другие ТОП модели</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- пока неясно будут ли кнопки вести на отдельную страницу или нет. если да, то лучше через ссылку делать;
+         корзина по определению должна вести на отдельную страницу;
+         SVG лучше скрыть от скринридера, чтобы не зачитывал внутренние path и точки-->
+        <div class="header__actions">
+          <button class="header__order">Сделать заказ</button>
+          <div class="header__user-actions">
+            <button class="header__search-btn" title="Поиск" aria-label="Найти">
+              <svg width="24" height="24" aria-hidden="true">
+                <use
+                  class="header__actions-icon"
+                  href="./images/icons/sprite.svg#search"
+                ></use>
+              </svg>
+            </button>
+            <a
+              href="#"
+              class="header__cart-btn"
+              title="Корзина"
+              aria-label="Корзина товаров"
+            >
+              <svg width="24" height="24" aria-hidden="true">
+                <use
+                  class="header__actions-icon"
+                  href="./images/icons/sprite.svg#basket"
+                ></use>
+              </svg>
+            </a>
+            <button
+              class="header__burger"
+              id="burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="header__menu"
+            >
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      const burger = document.querySelector(".header__burger");
+      const menu = document.querySelector(".menu");
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("header__burger--open");
+        menu.classList.toggle("open");
+      });
+
+      const header = document.querySelector(".header");
+      let isScrolling;
+      window.addEventListener("scroll", () => {
+        header.classList.add("header--fixed");
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+          header.classList.remove("header--fixed");
+        }, 150);
+      });
+    </script>
+  </body>
+</html>
