@@ -1,0 +1,99 @@
+@media (width > 576px) {
+  .airmag {
+    padding-bottom: 93px;
+  }
+
+  .airmag__title {
+    margin-bottom: 10px;
+  }
+}
+
+@media (width <= 576px) {
+  .airmag {
+    padding-bottom: 80px;
+  }
+
+  .airmag__title {
+    margin-bottom: 13px;
+  }
+}
+
+.airmag__desc {
+  display: flex;
+  gap: 13px;
+}
+
+.airmag__desc::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  background-image: url("../../../images/icons/decor-rectan.svg");
+  width: 131px;
+  height: 40px;
+  transform: translateX(-13px);
+}
+
+@media screen and (width>768px) {
+  .airmag__desc {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (width<=768px) {
+  .airmag__desc {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+}
+
+.airmag__info-wrapper {
+  display: flex;
+}
+
+@media screen and (width>992px) {
+  .airmag__info-wrapper {
+    gap: 40px;
+  }
+}
+
+@media screen and (width<=992px) {
+  .airmag__info-wrapper {
+    flex-direction: column;
+  }
+}
+
+.airmag__img {
+  min-width: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.airmag__info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width>992px) {
+  .airmag__info-list {
+    gap: 40px;
+    min-width: 293px;
+    transform: translateY(71px);
+  }
+}
+
+@media screen and (width<=992px) {
+  .airmag__info-list {
+    gap: 20px;
+    max-width: 700px;
+  }
+}
+
+.airmag__info-item::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 34px;
+  margin-bottom: 5px;
+  background-image: url("../../../images/icons/dbl-check.svg");
+  transform: translateX(-8px);
+}

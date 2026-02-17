@@ -1,0 +1,50 @@
+html {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--primary);
+  scroll-behavior: smooth;
+  scroll-padding-top: 98px;
+}
+
+body {
+  min-width: 375px;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.text-regular,
+.text-light {
+  line-height: 1.4;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+/* мин вьюпорт - 320, макс - 992 */
+.title-md {
+  font-weight: 600;
+  font-size: clamp(32px, 1.167rem + 4.17vw, 60px);
+  text-transform: uppercase;
+  color: var(--primary);
+}
