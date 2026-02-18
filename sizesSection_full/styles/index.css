@@ -1,0 +1,14 @@
+/* general styles */
+@import url("./base/normalize.css");
+@import url("./base/fonts.css");
+@import url("./base/variables.css");
+@import url("./base/globals.css");
+
+/* BEM blocks */
+@import "./BEM/blocks/header.css";
+@import "./BEM/blocks/nav-menu.css";
+@import "./BEM/blocks/burger.css";
+@import "./BEM/blocks/hero.css";
+@import "./BEM/blocks/airmag.css";
+@import "./BEM/blocks/product.css";
+@import "./BEM/blocks/footer.css";
