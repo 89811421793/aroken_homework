@@ -1,0 +1,32 @@
+:root {
+  /* font-family */
+  --font-family: "Montserrat", sans-serif;
+
+  /* main colors */
+  --bg-color: #2a2a29;
+  --primary: #fff;
+  --secondary: #c9c69b;
+  --glow-primary: #ffffff4d;
+  --overlay-tint: #2a2a2980;
+
+  /* accent colors */
+  --accent: #ffea00;
+  --glow-accent: #ffea004d;
+
+  /* shadows */
+  --shadow: #181817;
+  --shadow-glow: 0 0 6px 2px var(--glow-primary);
+  --shadow-accent-glow: 0 0 6px 2px var(--glow-accent);
+  --shadow-disabled-glow: 0 0 6px 2px var(--glow-disable);
+
+  /* disabled states*/
+  --disable: #5d5d56;
+  --glow-disable: #5d5d564d;
+
+  /* container */
+  --container-width: 1240px;
+  --container-padding: 15px;
+
+  /* transitions */
+  --transition-time: 0.3s;
+}
