@@ -1,0 +1,218 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.modal {
+  /* оверлей */
+  --transition-time: 0.2s;
+
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--overlay);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+  -o-transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+}
+
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* само модальное окно */
+.modal__window {
+  position: relative;
+  display: none;
+  margin-block: 50px;
+  vertical-align: middle;
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  -webkit-box-shadow: 0 0 20px var(--shadow);
+  box-shadow: 0 0 20px var(--shadow);
+}
+
+@media (width > 576px) {
+  .modal__window {
+    padding: 100px 50px;
+  }
+}
+
+@media (width <= 576px) {
+  .modal__window {
+    padding: 80px 30px;
+    width: 90%;
+  }
+}
+
+.modal__window--open {
+  display: inline-block;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+/* model-buy cascades */
+@media (width > 576px) {
+  .modal-buy {
+    width: min(800px, 80%); /* аналогично можно использ clamp */
+  }
+}
+
+.modal-buy__content {
+  max-width: 448px;
+  margin: 0 auto;
+}
+
+@media (width > 576px) {
+  .modal-buy__title {
+    margin-bottom: 56px;
+  }
+}
+
+@media (width <= 576px) {
+  .modal-buy__title {
+    margin-bottom: 36px;
+  }
+}
+
+.modal-buy__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.modal-buy__label {
+  margin-bottom: 16px;
+}
+
+.modal-buy__input {
+  display: inline-block;
+  width: 100%;
+  color: var(--primary);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+}
+
+@media (width > 576px) {
+  .modal-buy__input {
+    padding: 20px 24px;
+    font-size: 16px;
+  }
+}
+
+@media (width <= 576px) {
+  .modal-buy__input {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+}
+
+.modal-buy__input::-webkit-input-placeholder {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.modal-buy__input::-moz-placeholder {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.modal-buy__input:-ms-input-placeholder {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.modal-buy__input::-ms-input-placeholder {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.modal-buy__input::placeholder {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.modal-buy__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-color);
+  border-radius: 4px;
+  background-color: var(--accent);
+  -webkit-transition: -webkit-box-shadow var(--transition-time);
+  transition: -webkit-box-shadow var(--transition-time);
+  -o-transition: box-shadow var(--transition-time);
+  transition: box-shadow var(--transition-time);
+  transition:
+    box-shadow var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
+  transition:
+    box-shadow var(--transition-time),
+    -webkit-box-shadow var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .modal-buy__submit:hover {
+    -webkit-box-shadow: var(--shadow-accent-glow);
+    box-shadow: var(--shadow-accent-glow);
+  }
+}
+
+@media (width > 576px) {
+  .modal-buy__submit {
+    margin-top: 56px;
+    padding: 20px;
+  }
+}
+
+@media (width <= 576px) {
+  .modal-buy__submit {
+    margin-top: 36px;
+    padding: 14px;
+  }
+}
