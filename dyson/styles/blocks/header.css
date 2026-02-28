@@ -1,0 +1,249 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  padding-block: 20px;
+  background-color: var(--primary);
+  z-index: 10;
+  /* отделение от футера */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.header__logo {
+  margin-right: clamp(15px, -70.1px + 8.58vw, 50px);
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
+  font-family: var(--second-family);
+  font-size: 20px;
+}
+
+@media (max-width: 1400px) {
+  .menu__list {
+    text-align: center;
+  }
+}
+
+/* либо можно вообще удалить у иконки stroke:currentColor; тогда нужно прописать эти правила:
+.header__bag-icon {
+  stroke: currentColor;
+  fill: none;
+} */
+
+.header__bag {
+  color: var(--bg-main);
+  -webkit-transition: color var(--duration-alt) ease;
+  -o-transition: color var(--duration-alt) ease;
+  transition: color var(--duration-alt) ease;
+}
+
+@media (any-hover: hover) {
+  .header__bag:hover {
+    color: var(--accent);
+  }
+}
+
+.header__bag--full {
+  position: relative;
+}
+
+/* например,  data-count="1" вставить в разметку как атрибут */
+.header__bag--full::after {
+  content: attr(data-count);
+  position: absolute;
+  top: 12px;
+  right: -12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 2px;
+  background-color: var(--bg-main);
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.menu__link {
+  color: var(--bg-main);
+  -webkit-transition: opacity var(--duration) ease;
+  -o-transition: opacity var(--duration) ease;
+  transition: opacity var(--duration) ease;
+}
+
+@media (any-hover: hover) {
+  .menu__link:hover {
+    opacity: 0.8;
+  }
+}
+
+/* __________________________________________________________________________________________________*/
+
+@media (min-width: 992px) {
+  .header__burger {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgb(66, 54, 54);
+    z-index: 10;
+    -webkit-transition: left var(--transition-time, 0.3s) ease;
+    -o-transition: left var(--transition-time, 0.3s) ease;
+    transition: left var(--transition-time, 0.3s) ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header__menu.open {
+    left: 0;
+  }
+
+  .header__logo {
+    margin-inline: 40px auto;
+  }
+
+  .header__bag {
+    margin-right: 70px;
+  }
+
+  .header__menu > .menu__list {
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30%;
+    margin-right: 20px;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 26px;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+  .header__burger span,
+  .header__burger span::before,
+  .header__burger span::after {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: var(--accent);
+    -webkit-transition: all var(--duration) ease;
+    -o-transition: all var(--duration) ease;
+    transition: all var(--duration) ease;
+  }
+
+  .header__burger span {
+    top: 55%;
+    left: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 15px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .header__burger span::before {
+    content: "";
+    top: -6px;
+    width: 20px;
+  }
+
+  .header__burger span::after {
+    content: "";
+    top: 6px;
+    width: 20px;
+  }
+
+  .header__burger--open span {
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__burger--open svg {
+    display: none;
+  }
+
+  .header__burger--open span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 20px;
+    background-color: var(--bg-main);
+  }
+
+  .header__burger--open span::after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 20px;
+    background-color: var(--bg-main);
+  }
+}
+
+@media (max-width: 576px) {
+  .header__bag {
+    margin-right: 12px;
+  }
+}

@@ -1,0 +1,114 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.expert__basic-wrapper {
+  margin-bottom: 70px;
+}
+
+.expert__basic-title {
+  font-family: var(--second-family);
+  margin-bottom: 15px;
+}
+
+.expert__basic-block:nth-child(1) .expert__basic-title {
+  /* или :first-child */
+  font-size: 20px;
+}
+
+.expert__basic-block:nth-child(2) .expert__basic-title {
+  font-size: 17px;
+}
+
+.expert__basic-block:nth-child(3) .expert__basic-title {
+  font-size: 16px;
+}
+
+.expert__basic-block:nth-child(4) .expert__basic-title {
+  font-size: 15px;
+}
+
+.expert__basic-block:nth-child(5) .expert__basic-title {
+  font-size: 14px;
+}
+
+.expert__basic-block:nth-child(6) .expert__basic-title {
+  /* или :last-child */
+  font-size: 13px;
+}
+
+.expert__basic-desc {
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+.expert__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.expert__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.expert__title {
+  margin-bottom: 40px;
+}
+
+.expert__description {
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--secondary);
+  max-width: 670px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+@media (width>992px) {
+  .expert__basic-wrapper {
+    display: none;
+  }
+}
+
+@media (width<1250px) {
+  .expert__img {
+    display: none;
+  }
+
+  /* .expert__wrapper {
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .expert {
+    padding-bottom: 50px;
+  }
+
+  .expert__title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .expert__description {
+    max-width: 100%;
+    font-size: 12px;
+  }
+}
+
+@media (width<576px) {
+  .expert__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

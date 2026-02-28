@@ -1,0 +1,18 @@
+/* main styles */
+@import url("./base/normalize.css");
+@import url("./base/fonts.css");
+@import url("./base/vars.css");
+@import url("./base/globals.css");
+
+/* BEM and sections */
+@import "./blocks/header.css";
+@import "./blocks/hero.css";
+@import "./blocks/catalog.css";
+@import "./blocks/expert.css";
+@import "./blocks/advantages.css";
+@import "./blocks/offers.css";
+@import "./blocks/reviews.css";
+@import "./blocks/faq.css";
+@import "./blocks/news.css";
+@import "./blocks/contacts.css";
+@import "./blocks/footer.css";

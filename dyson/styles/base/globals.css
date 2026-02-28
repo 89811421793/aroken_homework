@@ -1,0 +1,92 @@
+/* ОТЛАВЛИВАТЕЛЬ БЕЛОЙ ПОЛОСЫ ПРИ АДАПТИВЕ  */
+/* * {
+  outline: 1px solid red !important;
+} */
+
+html {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--bg-main);
+}
+
+/* вариант преподавателя для адаптации контейнера: */
+/* .container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+} */
+
+/* "коварно-капризный" вариант для адаптации контейнера; есть нюансы:
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}*/
+
+/* вариант с калькулирующей функцией для адаптации контейнера */
+.container {
+  max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.form {
+  flex: 1;
+  max-width: 555px;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* чтобы ссылки не синели по дефолту  */
+}
+
+img {
+  object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Каждая вторая секция после hero будет #f8f8f8; но можно чередовать цвета и через классы-модификаторы (напр, .section--alt), если структура сайта будет меняться. Пока оставлю так
+ */
+section:not(.hero):nth-of-type(2n + 3) {
+  background-color: var(--bg-alt);
+}
+
+/* .section--alt {
+  background-color: var(--bg-alt);
+} */
+
+@media (max-width: 992px) {
+  section:not(.hero) {
+    padding-top: 50px;
+  }
+}
+
+section {
+  padding-top: 150px;
+}
+
+/* Для всех секций кроме hero и expert */
+section:not(.hero):not(.expert) {
+  padding-bottom: 150px;
+}
+
+@media (width>1200px) {
+  .section-title {
+    font-family: var(--second-family);
+    font-weight: 100;
+    font-size: 42px;
+    color: var(--primary);
+  }
+}

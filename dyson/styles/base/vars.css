@@ -1,0 +1,39 @@
+:root {
+  /* font-family */
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "NAMU Pro", sans-serif;
+
+  /* main colors */
+  --bg-main: #fff;
+  --bg-alt: #f8f8f8;
+  --primary: #111111;
+  --secondary: #000000;
+  --hero-bg: #dddddd;
+
+  /* subtext colors */
+  --color-muted: #ababab;
+  --date-color: #909090;
+
+  /* accent colors */
+  --accent: #c5358c;
+
+  /* colours for in-stock and out-of-stock */
+  --available: #68ae5c;
+  --unavailable: #dc5b5b;
+
+  /* shadows */
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-drop: 0px 4px 41px 0px var(--shadow-color);
+
+  /* select options */
+  --option-border: #cccccc;
+  --option-bg: #fdfdfd;
+
+  /* container */
+  --container-width: 1360px;
+  --container-padding: 15px;
+
+  /* transitions */
+  --duration: 0.3s;
+  --duration-alt: 0.2s;
+}
