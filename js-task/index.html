@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basics</title>
+    <script>
+      /* Задача 1.
+         Создайте переменные с корректными именами, чтобы сохранить следующую информацию:
+         1. firstName – имя (строка)
+         2. lastName – фамилия (строка)
+         3. isStudent – является ли учеником курса (булево значение)
+
+         Задача 2.
+         1. Объявите переменную age с числовым значением возраста студента.
+         2. Объявите переменную currentYear и присвойте ей значение текущего года (например, 2025).
+         3. Используя age и currentYear вычислите год рождения студента, запишите результат в переменную birthYear.
+
+         Задача 3.
+         Выведите в консоли сообщение в таком формате:
+         Меня зовут [firstName] [lastName], мне [age] лет. Я ученик/ученица курса: [isStudent].
+
+         Задача 4.
+         Какое значение будет у переменной result?
+         let a = '123';
+         let b = +'456';
+         let c = Number('789');
+         let d = Boolean(0);
+         let e = Boolean(' ');
+         let result = a + b + c + d + e;
+
+      ========================================================================================*/
+      /*Задача 1 */
+      let firstName = "Max";
+      let lastName = "Kraynov";
+      let isStudent = true;
+
+      /*Задача 2*/
+      let birthYear;
+      let age = 25;
+      let currentYear = 2024;
+      birthYear = currentYear - age;
+
+      /*Задача 3*/
+      console.log(
+        `Меня зовут ${firstName} ${lastName}, мне ${age} лет. Я студент курса: ${isStudent}.`,
+      );
+      //   или конкатенацией:console.log("Меня зовут " + firstName + " " + lastName + ", мне " + age + " лет. Я студент курса: " + isStudent + ".")
+
+      /*Задача 4*/
+      var a = "123",
+        b = +"456",
+        c = Number("789"),
+        d = Boolean(0),
+        e = Boolean(" ");
+      console.log(typeof a); // строка "123"
+      console.log(typeof b); // число 456 через унарный плюс
+      console.log(typeof c); // число 789 через встроенную функцию Number c заглавной буквы
+      console.log(typeof d); // булево значение false
+      console.log(typeof e); // булево значение true, т к пустая строка с пробелом
+
+      var result;
+      result = a + b + c + d + e;
+      console.log(result); //123456789falsetrue;
+
+      //из этого можно получить число и убрать конкатенацию есля ЯВНО конвертировать тип string в переменной "a" в число ; остальные преобразуются в число НЕЯВНО через арифметический плюс/сложение.
+
+      console.log(+a + b + c + d + e); //123+456+789+0+1=1369 или alert(Number(a) + b + c + d + e);
+    </script>
+  </head>
+  <body></body>
+</html>
