@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object practice</title>
+  </head>
+  <body>
+    <script>
+      // Задача 1.
+      // Создайте объект person с несколькими свойствами, содержащими информацию о вас. Затем выведите значения этих свойств в консоль.
+
+      const person = {
+        firstName: "John",
+        lastName: "Smith",
+        age: 30,
+        address: {
+          city: "Moscow",
+          country: "Russian Federation",
+        },
+        sayHi: function () {
+          return `Привет, мир! Меня зовут ${person.firstName}!`; //   без this
+        },
+        sayBye() {
+          return "До встречи!";
+        },
+      };
+
+      console.log(person["firstName"]);
+      console.log(person.lastName);
+      console.log(person.age);
+      console.log(person["address"]["city"]);
+      console.log(person.address.country);
+      console.log(person.sayHi());
+      console.log(person.sayBye());
+
+      //   пробуем цикл для объекта for/in (у меня есть методы и один вложенный объект для которых нужны проверки)
+      for (let key in person) {
+        let value = person[key];
+
+        if (typeof value === "function") {
+          // Если это метод, вызываем и выводим его результат
+          console.log(value());
+        } else if (typeof value === "object" && value !== null) {
+          // Для вложенного объекта address перебираем его свойства
+          for (let subKey in value) {
+            console.log(value[subKey]);
+          }
+        } else {
+          // Для обычных свойств (строки, числа)
+          console.log(value);
+        }
+      }
+
+      //   без проверок будет выводить прямо, как есть (код свойств-действий не будет выполняться)
+      for (let key in person) {
+        console.log(person[key]);
+      }
+
+      /*___________________________________________________________________________________________________________________________*/
+
+      // Задача 2.
+      // Создайте функцию isEmpty, которая проверяет является ли переданный объект пустым. Если объект пуст - верните true, в противном случае false.
+
+      function isEmpty(obj) {
+        for (let key in obj) {
+          return false; //если поля есть, цикл пройдет
+        }
+        return true; //если пусто, то цикл не будет продолжаться..
+      }
+
+      console.log(isEmpty({name: "Petya"}));
+      console.log(isEmpty({}));
+      console.log(isEmpty(new Object()));
+
+      /*___________________________________________________________________________________________________________________________*/
+
+      // Задача 3.
+      // Создайте объект task с несколькими свойствами: title, description, isCompleted.
+      // Напишите функцию cloneAndModify(object, modifications), которая с помощью оператора spread создает копию объекта и применяет изменения из объекта modifications.
+      // Затем с помощью цикла for in выведите все свойства полученного объекта.
+
+      const task = {
+        title: "Ознакомиться с SEO",
+        description: "Просмотреть уроки по ранжированию и индексации",
+        isCompleted: false,
+      };
+
+      function cloneAndModify(object, modifications) {
+        return {
+          ...object,
+          ...modifications, // перезаписываем нужные свойства или добавляем новые
+        };
+      }
+
+      const modifiedTask = cloneAndModify(task, {
+        priority: "High",
+        title2: "Еще ознакомиться с основами безопасности сайта",
+        description2: "Без комментариев пока что",
+      });
+
+      for (let key in modifiedTask) {
+        console.log(`${key}: ${modifiedTask[key]}`);
+      }
+
+      /*___________________________________________________________________________________________________________________________*/
+
+      // Задача 4.
+      // Создайте функцию callAllMethods, которая принимает объект и вызывает все его методы.
+
+      // Пример использования:
+      // const myObject = {
+      //     method1() {
+      //         console.log('Метод 1 вызван');
+      //     },
+      //     method2() {
+      //         console.log('Метод 2 вызван');
+      //     },
+      //     property: 'Это не метод'
+      // };
+      // callAllMethods(myObject);
+
+      const myObject = {
+        method1() {
+          console.log("Метод 1 вызван");
+        },
+        method2() {
+          console.log("Метод 2 вызван");
+        },
+        property: "Это не метод",
+      };
+
+      callAllMethods(myObject);
+
+      function callAllMethods(obj) {
+        for (let key in obj) {
+          if (typeof obj[key] === "function") {
+            //   просто проверяем является ли свойство свойством-действием
+            obj[key]();
+          }
+        }
+      }
+
+      //   вариант function expression не всплывает, как function declaration; поэтому вызов  callAllMethods(myObject) помещаем после объявления вниз(касается и let, и const)
+
+      const myObject2 = {
+        method1: function () {
+          console.log("Метод 1 вызван");
+        },
+        method2: function () {
+          console.log("Метод 2 вызван");
+        },
+        property: "Это не метод",
+      };
+      const callAllMethods2 = function (obj) {
+        for (let key in obj) {
+          if (typeof obj[key] === "function") {
+            obj[key]();
+          }
+        }
+      };
+
+      callAllMethods(myObject);
+    </script>
+  </body>
+</html>
