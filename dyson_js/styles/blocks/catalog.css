@@ -1,0 +1,121 @@
+/* Css prefixes manually:  ошибка -ms-*/
+
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 325px), 1fr));
+  gap: 20px;
+}
+
+.catalog__card {
+  -webkit-box-shadow: var(--shadow-drop);
+  box-shadow: var(--shadow-drop);
+}
+
+.catalog__footer {
+  padding: 22px 40px 30px;
+  -webkit-transition: background-color var(--duration) ease;
+  -o-transition: background-color var(--duration) ease;
+  transition: background-color var(--duration) ease;
+}
+
+@media (any-hover: hover) {
+  .catalog__footer:hover {
+    background-color: var(--primary);
+  }
+}
+
+.catalog__card-name {
+  font-family: var(--second-family);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 11px;
+  -webkit-transition: color var(--duration) ease;
+  -o-transition: color var(--duration) ease;
+  transition: color var(--duration) ease;
+}
+
+.catalog__link {
+  position: relative;
+  font-size: 24px;
+  color: var(--primary);
+  -webkit-transition: color var(--duration) ease;
+  -o-transition: color var(--duration) ease;
+  transition: color var(--duration) ease;
+}
+
+@media (any-hover: hover) {
+  .catalog__footer:hover .catalog__card-name,
+  .catalog__footer:hover .catalog__link {
+    color: var(--bg-main);
+  }
+}
+
+.catalog__link::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 21px;
+  height: 20px;
+  top: 20%;
+  right: -35%;
+  background: url("../../images/icons/arrow.svg") no-repeat center / contain;
+  -webkit-transition: -webkit-filter var(--duration) ease;
+  transition: -webkit-filter var(--duration) ease;
+  -o-transition: filter var(--duration) ease;
+  transition: filter var(--duration) ease;
+  transition:
+    filter var(--duration) ease,
+    -webkit-filter var(--duration) ease;
+}
+
+/* если без псевдоэлемента, то вставить через use в html и использ currentColor */
+
+@media (any-hover: hover) {
+  .catalog__footer:hover .catalog__link::after {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (max-width: 991px) {
+  .catalog__card-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .catalog__link {
+    font-size: 12px;
+  }
+
+  .catalog__link::after {
+    width: 10px;
+    height: 10px;
+    top: 22%;
+    right: -35%;
+  }
+
+  .catalog__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    /* ИЛИ более гибко: */
+    /* grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); */
+    gap: 10px;
+  }
+
+  .catalog__footer {
+    padding: 15px; /* Уменьшаем огромные паддинги, иначе контент не влезет в 142px */
+  }
+}
+
+@media (max-width: 575px) {
+  .catalog__card-name {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .catalog__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    /* ИЛИ: */
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  }
+}

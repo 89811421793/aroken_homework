@@ -1,0 +1,106 @@
+/* Css prefixes manually:  ошибка -ms-*/
+
+.advantages__title {
+  margin-bottom: 60px;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 20px;
+}
+
+.advantages__item {
+  padding: 45px 105px;
+  -webkit-box-shadow: var(--shadow-drop);
+  box-shadow: var(--shadow-drop);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  row-gap: 20px;
+}
+
+.advantages__item-title {
+  font-family: var(--second-family);
+  font-size: 20px;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.advantages__item-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--secondary);
+}
+
+@media (max-width: 1200px) {
+  .advantages__item-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 991px) {
+  .advantages__title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 70px;
+  }
+
+  .advantages__item {
+    padding: 30px 20px;
+  }
+
+  .advantages__item-title {
+    font-size: 14px;
+  }
+
+  .advantages__item-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .advantages__title {
+    margin-bottom: 15px;
+  }
+
+  .advantages__list {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    row-gap: 5px;
+    padding: 17px 30px 25px 30px;
+    text-align: left;
+    place-items: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .advantages__item > *:first-child {
+    grid-row: 1 / 3;
+  }
+
+  .advantages__item-title {
+    grid-column: 2;
+    white-space: normal;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .advantages__item-text {
+    grid-column: 2;
+    font-size: 14px;
+  }
+}

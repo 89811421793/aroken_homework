@@ -1,0 +1,66 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.faq__accordion {
+  margin-top: 60px;
+  font-size: 20px;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.faq__item {
+  border-top: 1px solid var(--color-muted);
+  padding-block: 34px;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.faq__question {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding-right: 50px;
+}
+
+/* для Safari */
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background: url("../../images/icons/expand.svg") no-repeat center / contain;
+}
+
+.faq__item[open] .faq__question::after {
+  content: "";
+  background-image: url("../../images/icons/collapse.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.faq__answer {
+  padding: 50px 0;
+  max-width: 80%;
+}
+
+@media (width<992px) {
+  .faq__question,
+  .faq__answer {
+    font-size: 16px;
+  }
+}
